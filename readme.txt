@@ -98,3 +98,8 @@ See the **Hooks Reference** section in the plugin's source code. Key hooks:
 
 = 1.0.0 =
 Initial release. No upgrade steps required.
+
+
+## License
+
+This plugin is licensed under the GNU General Public License v2.0 or later.
