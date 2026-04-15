@@ -21,7 +21,7 @@ class Collector_Users implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Users & Roles', 'wp-snapshot' );
+		return __( 'Users & Roles', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {

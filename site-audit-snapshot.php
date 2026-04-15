@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       WP Snapshot
- * Plugin URI:        https://github.com/mrabro/wp-snapshot
+ * Plugin Name:       Site Audit Snapshot
+ * Plugin URI:        https://github.com/mrabro/site-audit-snapshot
  * Description:       Generate a complete site audit report — plugins, themes, server info, database, cron, security, and more. Export as PDF or share via temporary link.
  * Version:           1.0.0
  * Requires at least: 6.5
@@ -10,7 +10,7 @@
  * Author URI:        https://github.com/mrabro
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       wp-snapshot
+ * Text Domain:       site-audit-snapshot
  * Domain Path:       /languages
  */
 
@@ -80,7 +80,7 @@ register_deactivation_hook( __FILE__, [ 'WPSnapshot\\Deactivator', 'deactivate' 
 
 // Boot the plugin.
 add_action( 'plugins_loaded', function (): void {
-	load_plugin_textdomain( 'wp-snapshot', false, dirname( WPS_PLUGIN_BASENAME ) . '/languages' );
+	load_plugin_textdomain( 'site-audit-snapshot', false, dirname( WPS_PLUGIN_BASENAME ) . '/languages' );
 	$bootstrap = new WPSnapshot\Bootstrap();
 	$bootstrap->init();
 } );

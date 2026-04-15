@@ -98,7 +98,7 @@ class Snapshot_Engine {
 				$data = [
 					'error' => sprintf(
 						/* translators: %s: error message */
-						__( 'Collection failed: %s', 'wp-snapshot' ),
+						__( 'Collection failed: %s', 'site-audit-snapshot' ),
 						$e->getMessage()
 					),
 				];
@@ -139,7 +139,7 @@ class Snapshot_Engine {
 	 */
 	public static function save( array $snapshot ): string|false {
 		$upload_dir   = wp_get_upload_dir();
-		$snapshot_dir = $upload_dir['basedir'] . '/wp-snapshot';
+		$snapshot_dir = $upload_dir['basedir'] . '/site-audit-snapshot';
 
 		// Ensure directory exists (created on activation, but defensive check).
 		if ( ! is_dir( $snapshot_dir ) ) {

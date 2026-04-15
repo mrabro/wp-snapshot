@@ -21,7 +21,7 @@ class Collector_Environment implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Environment', 'wp-snapshot' );
+		return __( 'Environment', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {

@@ -53,8 +53,8 @@ class Bootstrap {
 	 */
 	public function add_action_links( array $links ): array {
 		$custom_links = [
-			'<a href="' . esc_url( admin_url( 'tools.php?page=wp-snapshot' ) ) . '">'
-			. esc_html__( 'Generate Snapshot', 'wp-snapshot' ) . '</a>',
+			'<a href="' . esc_url( admin_url( 'tools.php?page=site-audit-snapshot' ) ) . '">'
+			. esc_html__( 'Generate Snapshot', 'site-audit-snapshot' ) . '</a>',
 		];
 		return array_merge( $custom_links, $links );
 	}

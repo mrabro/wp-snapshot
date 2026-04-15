@@ -24,7 +24,7 @@ class Activator {
 		if ( version_compare( PHP_VERSION, '8.1', '<' ) ) {
 			deactivate_plugins( WPS_PLUGIN_BASENAME );
 			wp_die(
-				esc_html__( 'WP Snapshot requires PHP 8.1 or higher.', 'wp-snapshot' ),
+				esc_html__( 'Site Audit Snapshot requires PHP 8.1 or higher.', 'site-audit-snapshot' ),
 				'Plugin Activation Error',
 				[ 'back_link' => true ]
 			);
@@ -35,7 +35,7 @@ class Activator {
 		if ( version_compare( $wp_version, '6.5', '<' ) ) {
 			deactivate_plugins( WPS_PLUGIN_BASENAME );
 			wp_die(
-				esc_html__( 'WP Snapshot requires WordPress 6.5 or higher.', 'wp-snapshot' ),
+				esc_html__( 'Site Audit Snapshot requires WordPress 6.5 or higher.', 'site-audit-snapshot' ),
 				'Plugin Activation Error',
 				[ 'back_link' => true ]
 			);
@@ -43,7 +43,7 @@ class Activator {
 
 		// Create the uploads directory for storing snapshot JSON files.
 		$upload_dir = wp_get_upload_dir();
-		$snapshot_dir = $upload_dir['basedir'] . '/wp-snapshot';
+		$snapshot_dir = $upload_dir['basedir'] . '/site-audit-snapshot';
 		if ( ! file_exists( $snapshot_dir ) ) {
 			wp_mkdir_p( $snapshot_dir );
 		}

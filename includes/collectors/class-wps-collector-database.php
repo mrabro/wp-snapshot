@@ -21,7 +21,7 @@ class Collector_Database implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Database', 'wp-snapshot' );
+		return __( 'Database', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {

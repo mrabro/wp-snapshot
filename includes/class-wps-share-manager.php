@@ -28,7 +28,7 @@ class Share_Manager {
 	 */
 	public function register_rewrite_rules(): void {
 		add_rewrite_rule(
-			'^wp-snapshot/share/([a-f0-9]{64})/?$',
+			'^site-audit-snapshot/share/([a-f0-9]{64})/?$',
 			'index.php?wps_share_token=$matches[1]',
 			'top'
 		);
@@ -67,8 +67,8 @@ class Share_Manager {
 
 		if ( null === $matched_key ) {
 			wp_die(
-				esc_html__( 'This snapshot link is invalid or has expired.', 'wp-snapshot' ),
-				esc_html__( 'WP Snapshot — Not Found', 'wp-snapshot' ),
+				esc_html__( 'This snapshot link is invalid or has expired.', 'site-audit-snapshot' ),
+				esc_html__( 'Site Audit Snapshot — Not Found', 'site-audit-snapshot' ),
 				[ 'response' => 404 ]
 			);
 		}
@@ -82,8 +82,8 @@ class Share_Manager {
 			update_option( self::OPTION_KEY, $tokens, false );
 
 			wp_die(
-				esc_html__( 'This snapshot link has expired.', 'wp-snapshot' ),
-				esc_html__( 'WP Snapshot — Expired', 'wp-snapshot' ),
+				esc_html__( 'This snapshot link has expired.', 'site-audit-snapshot' ),
+				esc_html__( 'Site Audit Snapshot — Expired', 'site-audit-snapshot' ),
 				[ 'response' => 410 ]
 			);
 		}
@@ -114,7 +114,7 @@ class Share_Manager {
 		} catch ( \Exception $e ) {
 			return new \WP_Error(
 				'wps_token_generation_failed',
-				__( 'Failed to generate a secure token.', 'wp-snapshot' ),
+				__( 'Failed to generate a secure token.', 'site-audit-snapshot' ),
 				[ 'status' => 500 ]
 			);
 		}
@@ -132,7 +132,7 @@ class Share_Manager {
 
 		return [
 			'token'   => $token,
-			'url'     => home_url( 'wp-snapshot/share/' . $token ),
+			'url'     => home_url( 'site-audit-snapshot/share/' . $token ),
 			'expires' => $expires,
 		];
 	}
@@ -194,7 +194,7 @@ class Share_Manager {
 			if ( $now <= $data['expires'] ) {
 				$summary[] = [
 					'token'      => $token,
-					'url'        => home_url( 'wp-snapshot/share/' . $token ),
+					'url'        => home_url( 'site-audit-snapshot/share/' . $token ),
 					'created'    => wp_date( 'Y-m-d H:i:s', $data['created'] ),
 					'expires_at' => wp_date( 'Y-m-d H:i:s', $data['expires'] ),
 					'expires_in' => human_time_diff( $now, $data['expires'] ),

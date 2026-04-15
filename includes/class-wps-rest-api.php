@@ -20,9 +20,9 @@ class Rest_Api {
 	 * Register all REST routes.
 	 */
 	public function register_routes(): void {
-		$namespace = 'wp-snapshot/v1';
+		$namespace = 'site-audit-snapshot/v1';
 
-		// POST /wp-json/wp-snapshot/v1/generate — generate a new snapshot.
+		// POST /wp-json/site-audit-snapshot/v1/generate — generate a new snapshot.
 		register_rest_route(
 			$namespace,
 			'/generate',
@@ -33,7 +33,7 @@ class Rest_Api {
 			]
 		);
 
-		// GET /wp-json/wp-snapshot/v1/snapshot — retrieve last saved snapshot.
+		// GET /wp-json/site-audit-snapshot/v1/snapshot — retrieve last saved snapshot.
 		register_rest_route(
 			$namespace,
 			'/snapshot',
@@ -44,7 +44,7 @@ class Rest_Api {
 			]
 		);
 
-		// POST /wp-json/wp-snapshot/v1/share — create a shareable link.
+		// POST /wp-json/site-audit-snapshot/v1/share — create a shareable link.
 		register_rest_route(
 			$namespace,
 			'/share',
@@ -64,7 +64,7 @@ class Rest_Api {
 			]
 		);
 
-		// GET /wp-json/wp-snapshot/v1/pdf — download printable HTML report.
+		// GET /wp-json/site-audit-snapshot/v1/pdf — download printable HTML report.
 		register_rest_route(
 			$namespace,
 			'/pdf',
@@ -75,7 +75,7 @@ class Rest_Api {
 			]
 		);
 
-		// DELETE /wp-json/wp-snapshot/v1/share/{token} — revoke a share link.
+		// DELETE /wp-json/site-audit-snapshot/v1/share/{token} — revoke a share link.
 		register_rest_route(
 			$namespace,
 			'/share/(?P<token>[a-f0-9]{64})',
@@ -103,7 +103,7 @@ class Rest_Api {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return new \WP_Error(
 				'rest_forbidden',
-				__( 'You do not have permission to perform this action.', 'wp-snapshot' ),
+				__( 'You do not have permission to perform this action.', 'site-audit-snapshot' ),
 				[ 'status' => 403 ]
 			);
 		}
@@ -124,7 +124,7 @@ class Rest_Api {
 		if ( false === $filepath ) {
 			return new \WP_Error(
 				'wps_save_failed',
-				__( 'Snapshot was generated but could not be saved to disk.', 'wp-snapshot' ),
+				__( 'Snapshot was generated but could not be saved to disk.', 'site-audit-snapshot' ),
 				[ 'status' => 500 ]
 			);
 		}
@@ -150,7 +150,7 @@ class Rest_Api {
 		if ( null === $snapshot ) {
 			return new \WP_Error(
 				'wps_no_snapshot',
-				__( 'No snapshot has been generated yet. Click "Generate Snapshot" to create one.', 'wp-snapshot' ),
+				__( 'No snapshot has been generated yet. Click "Generate Snapshot" to create one.', 'site-audit-snapshot' ),
 				[ 'status' => 404 ]
 			);
 		}
@@ -170,7 +170,7 @@ class Rest_Api {
 		if ( null === $snapshot ) {
 			return new \WP_Error(
 				'wps_no_snapshot',
-				__( 'Generate a snapshot first before creating a share link.', 'wp-snapshot' ),
+				__( 'Generate a snapshot first before creating a share link.', 'site-audit-snapshot' ),
 				[ 'status' => 400 ]
 			);
 		}
@@ -222,7 +222,7 @@ class Rest_Api {
 		if ( null === $snapshot ) {
 			return new \WP_Error(
 				'wps_no_snapshot',
-				__( 'No snapshot found. Generate one first.', 'wp-snapshot' ),
+				__( 'No snapshot found. Generate one first.', 'site-audit-snapshot' ),
 				[ 'status' => 404 ]
 			);
 		}
@@ -256,7 +256,7 @@ class Rest_Api {
 		if ( ! $revoked ) {
 			return new \WP_Error(
 				'wps_token_not_found',
-				__( 'Token not found or already revoked.', 'wp-snapshot' ),
+				__( 'Token not found or already revoked.', 'site-audit-snapshot' ),
 				[ 'status' => 404 ]
 			);
 		}
@@ -264,7 +264,7 @@ class Rest_Api {
 		return rest_ensure_response(
 			[
 				'success' => true,
-				'message' => __( 'Share link has been revoked.', 'wp-snapshot' ),
+				'message' => __( 'Share link has been revoked.', 'site-audit-snapshot' ),
 			]
 		);
 	}

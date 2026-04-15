@@ -1,12 +1,12 @@
-# Copyright (C) 2026 WP Snapshot
-# This file is distributed under the same license as the WP Snapshot plugin.
+# Copyright (C) 2026 Site Audit Snapshot
+# This file is distributed under the same license as the Site Audit Snapshot plugin.
 # M Rafi Abro <mrafiabro@hotmail.com>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Snapshot 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/mrabro/wp-snapshot/issues\n"
+"Project-Id-Version: Site Audit Snapshot 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mrabro/site-audit-snapshot/issues\n"
 "POT-Creation-Date: 2026-04-15 00:00:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Last-Translator: M Rafi Abro <mrafiabro@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: WP-CLI 2.x\n"
-"X-Domain: wp-snapshot\n"
+"X-Domain: site-audit-snapshot\n"
 
 #. Plugin Name of the plugin
-msgid "WP Snapshot"
+msgid "Site Audit Snapshot"
 msgstr ""
 
 #. Plugin URI of the plugin
-msgid "https://github.com/mrabro/wp-snapshot"
+msgid "https://github.com/mrabro/site-audit-snapshot"
 msgstr ""
 
 #. Description of the plugin
@@ -34,11 +34,11 @@ msgid "M Rafi Abro"
 msgstr ""
 
 #: includes/class-wps-activator.php
-msgid "WP Snapshot requires PHP 8.1 or higher."
+msgid "Site Audit Snapshot requires PHP 8.1 or higher."
 msgstr ""
 
 #: includes/class-wps-activator.php
-msgid "WP Snapshot requires WordPress 6.5 or higher."
+msgid "Site Audit Snapshot requires WordPress 6.5 or higher."
 msgstr ""
 
 #: includes/class-wps-bootstrap.php
@@ -46,7 +46,7 @@ msgid "Generate Snapshot"
 msgstr ""
 
 #: includes/class-wps-admin-page.php
-msgid "WP Snapshot"
+msgid "Site Audit Snapshot"
 msgstr ""
 
 #: includes/class-wps-admin-page.php
@@ -86,7 +86,7 @@ msgid "This snapshot link is invalid or has expired."
 msgstr ""
 
 #: includes/class-wps-share-manager.php
-msgid "WP Snapshot — Not Found"
+msgid "Site Audit Snapshot — Not Found"
 msgstr ""
 
 #: includes/class-wps-share-manager.php
@@ -94,7 +94,7 @@ msgid "This snapshot link has expired."
 msgstr ""
 
 #: includes/class-wps-share-manager.php
-msgid "WP Snapshot — Expired"
+msgid "Site Audit Snapshot — Expired"
 msgstr ""
 
 #: includes/class-wps-share-manager.php

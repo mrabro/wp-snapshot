@@ -21,12 +21,12 @@ class Collector_Performance implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Performance', 'wp-snapshot' );
+		return __( 'Performance', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {
 		// Object cache type detection.
-		$object_cache_type = __( 'None (default transient/DB cache)', 'wp-snapshot' );
+		$object_cache_type = __( 'None (default transient/DB cache)', 'site-audit-snapshot' );
 		if ( wp_using_ext_object_cache() ) {
 			if ( defined( 'WP_REDIS_VERSION' ) ) {
 				$object_cache_type = 'Redis (v' . WP_REDIS_VERSION . ')';
@@ -35,7 +35,7 @@ class Collector_Performance implements Collector_Interface {
 			} elseif ( class_exists( 'Memcached' ) ) {
 				$object_cache_type = 'Memcached';
 			} else {
-				$object_cache_type = __( 'External (type unknown)', 'wp-snapshot' );
+				$object_cache_type = __( 'External (type unknown)', 'site-audit-snapshot' );
 			}
 		}
 
@@ -89,7 +89,7 @@ class Collector_Performance implements Collector_Interface {
 			'page_cache_likely'    => $page_cache_active,
 			'opcache_enabled'      => $opcache_enabled,
 			'image_editor'         => $image_editor,
-			'permalink_structure'  => $permalink_structure ?: __( 'Plain (no pretty permalinks)', 'wp-snapshot' ),
+			'permalink_structure'  => $permalink_structure ?: __( 'Plain (no pretty permalinks)', 'site-audit-snapshot' ),
 			'max_upload_size'      => wp_max_upload_size(),
 			'max_upload_human'     => size_format( wp_max_upload_size() ),
 			'wp_org_reachable'     => $wp_org_reachable === 'yes',

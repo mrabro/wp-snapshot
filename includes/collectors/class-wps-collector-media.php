@@ -21,7 +21,7 @@ class Collector_Media implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Media Library', 'wp-snapshot' );
+		return __( 'Media Library', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {
@@ -77,7 +77,7 @@ class Collector_Media implements Collector_Interface {
 			'upload_dir_size'       => $upload_size,
 			'upload_dir_size_human' => $upload_size > 0
 				? size_format( $upload_size )
-				: __( 'Unable to calculate', 'wp-snapshot' ),
+				: __( 'Unable to calculate', 'site-audit-snapshot' ),
 		];
 	}
 }

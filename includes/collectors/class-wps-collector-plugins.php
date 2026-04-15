@@ -21,7 +21,7 @@ class Collector_Plugins implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Plugins', 'wp-snapshot' );
+		return __( 'Plugins', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {

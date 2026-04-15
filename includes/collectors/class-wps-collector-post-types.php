@@ -33,7 +33,7 @@ class Collector_Post_Types implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Post Types', 'wp-snapshot' );
+		return __( 'Post Types', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {

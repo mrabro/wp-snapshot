@@ -32,7 +32,7 @@ class Collector_Taxonomies implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Taxonomies', 'wp-snapshot' );
+		return __( 'Taxonomies', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {

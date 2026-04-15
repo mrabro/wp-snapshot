@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall WP Snapshot
+ * Uninstall Site Audit Snapshot
  *
  * Runs when the plugin is deleted from wp-admin.
  * Removes all plugin data from the database and filesystem.
@@ -21,7 +21,7 @@ delete_transient( 'wps_wp_org_reachable' );
 
 // Remove snapshot JSON files from uploads directory.
 $upload_dir   = wp_get_upload_dir();
-$snapshot_dir = $upload_dir['basedir'] . '/wp-snapshot';
+$snapshot_dir = $upload_dir['basedir'] . '/site-audit-snapshot';
 
 if ( is_dir( $snapshot_dir ) ) {
 	$files = glob( $snapshot_dir . '/*.json' );

@@ -24,7 +24,7 @@ class Collector_Rest_Api implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'REST API', 'wp-snapshot' );
+		return __( 'REST API', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {

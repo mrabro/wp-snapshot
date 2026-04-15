@@ -1,4 +1,4 @@
-=== WP Snapshot - Site Audit & Handoff Report ===
+=== Site Audit Snapshot ===
 Contributors: mrabro
 Tags: audit, site-health, handoff, report, snapshot
 Requires at least: 6.5

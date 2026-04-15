@@ -21,7 +21,7 @@ class Collector_Cron implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Cron Jobs', 'wp-snapshot' );
+		return __( 'Cron Jobs', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {
@@ -54,11 +54,11 @@ class Collector_Cron implements Collector_Interface {
 							'next_run'        => $timestamp,
 							'next_run_human'  => wp_date( 'Y-m-d H:i:s', $timestamp ),
 							'next_run_diff'   => $timestamp > time()
-								? human_time_diff( time(), $timestamp ) . ' ' . __( 'from now', 'wp-snapshot' )
-								: human_time_diff( $timestamp, time() ) . ' ' . __( 'ago', 'wp-snapshot' ),
+								? human_time_diff( time(), $timestamp ) . ' ' . __( 'from now', 'site-audit-snapshot' )
+								: human_time_diff( $timestamp, time() ) . ' ' . __( 'ago', 'site-audit-snapshot' ),
 							'overdue'         => $timestamp < time(),
 							'schedule'        => $event['schedule'] ?: 'one-time',
-							'schedule_label'  => $interval_label ?: __( 'One-time', 'wp-snapshot' ),
+							'schedule_label'  => $interval_label ?: __( 'One-time', 'site-audit-snapshot' ),
 							'interval'        => $event['interval'] ?? null,
 							'args'            => $event['args'],
 						];

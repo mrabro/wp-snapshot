@@ -21,7 +21,7 @@ class Collector_Themes implements Collector_Interface {
 	}
 
 	public function get_title(): string {
-		return __( 'Themes', 'wp-snapshot' );
+		return __( 'Themes', 'site-audit-snapshot' );
 	}
 
 	public function collect(): array {
