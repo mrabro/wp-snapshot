@@ -1,0 +1,341 @@
+/* =============================================================
+   WP Snapshot — Admin Dashboard Styles
+   BEM-prefixed: .wps-dashboard__*
+   ============================================================= */
+
+/* === Reset / Base === */
+.wps-dashboard *,
+.wps-dashboard *::before,
+.wps-dashboard *::after {
+	box-sizing: border-box;
+}
+
+/* === Dashboard wrapper === */
+.wps-dashboard {
+	max-width: 1200px;
+}
+
+.wps-dashboard__title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 1.3;
+	color: #1d2327;
+	margin: 20px 0 12px;
+}
+
+.wps-dashboard__title svg {
+	flex-shrink: 0;
+	color: #2271b1;
+}
+
+.wps-dashboard__meta {
+	color: #646970;
+	font-size: 13px;
+	margin: 0 0 16px;
+}
+
+/* === Action bar === */
+.wps-dashboard__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 20px;
+	align-items: center;
+}
+
+/* === Buttons === */
+.wps-dashboard__btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 16px;
+	border-radius: 3px;
+	font-size: 13px;
+	font-weight: 500;
+	cursor: pointer;
+	border: 1px solid transparent;
+	text-decoration: none;
+	line-height: 1.4;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.wps-dashboard__btn--primary {
+	background: #2271b1;
+	border-color: #2271b1;
+	color: #fff;
+}
+
+.wps-dashboard__btn--primary:hover,
+.wps-dashboard__btn--primary:focus {
+	background: #135e96;
+	border-color: #135e96;
+	color: #fff;
+}
+
+.wps-dashboard__btn--secondary {
+	background: #f6f7f7;
+	border-color: #2271b1;
+	color: #2271b1;
+}
+
+.wps-dashboard__btn--secondary:hover,
+.wps-dashboard__btn--secondary:focus {
+	background: #f0f0f1;
+	color: #135e96;
+}
+
+.wps-dashboard__btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+/* === Spinner === */
+.wps-dashboard__spinner {
+	display: flex;
+	align-items: center;
+	color: #646970;
+	font-size: 13px;
+	margin-bottom: 16px;
+}
+
+/* === Empty state === */
+.wps-dashboard__empty {
+	background: #f6f7f7;
+	border: 1px dashed #c3c4c7;
+	border-radius: 6px;
+	padding: 40px 24px;
+	text-align: center;
+	color: #646970;
+	margin-top: 20px;
+}
+
+/* === Tabs === */
+.wps-dashboard__tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	border-bottom: 1px solid #dcdcde;
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+.wps-dashboard__tab {
+	background: none;
+	border: 1px solid transparent;
+	border-bottom: none;
+	padding: 8px 14px;
+	font-size: 13px;
+	font-weight: 500;
+	color: #646970;
+	cursor: pointer;
+	border-radius: 3px 3px 0 0;
+	position: relative;
+	bottom: -1px;
+	transition: color 0.1s;
+}
+
+.wps-dashboard__tab:hover {
+	color: #1d2327;
+	background: #f6f7f7;
+}
+
+.wps-dashboard__tab--active {
+	border-color: #dcdcde;
+	border-bottom-color: #fff;
+	background: #fff;
+	color: #1d2327;
+	font-weight: 600;
+}
+
+/* === Panels === */
+.wps-dashboard__panel {
+	display: none;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-top: none;
+	padding: 20px;
+	border-radius: 0 0 4px 4px;
+}
+
+.wps-dashboard__panel--active {
+	display: block;
+}
+
+/* === Cards grid === */
+.wps-dashboard__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.wps-dashboard__card {
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 14px 12px;
+	text-align: center;
+}
+
+.wps-dashboard__card--wide {
+	text-align: left;
+	padding: 16px;
+}
+
+.wps-dashboard__card-label {
+	font-size: 11px;
+	color: #646970;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	margin-bottom: 4px;
+}
+
+.wps-dashboard__card-value {
+	font-size: 22px;
+	font-weight: 700;
+	color: #1d2327;
+	line-height: 1.2;
+}
+
+.wps-dashboard__card-value--warning {
+	color: #b45309;
+}
+
+.wps-dashboard__card-value--critical {
+	color: #b91c1c;
+}
+
+.wps-dashboard__card-value--good {
+	color: #166534;
+}
+
+/* === Tables === */
+.wps-dashboard__table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 13px;
+	margin-bottom: 16px;
+}
+
+.wps-dashboard__table th {
+	background: #f6f7f7;
+	text-align: left;
+	padding: 7px 10px;
+	border-bottom: 1px solid #dcdcde;
+	font-weight: 600;
+	white-space: nowrap;
+	color: #3c434a;
+}
+
+.wps-dashboard__table td {
+	padding: 7px 10px;
+	border-bottom: 1px solid #f0f0f1;
+	vertical-align: top;
+	color: #1e1e1e;
+}
+
+.wps-dashboard__table tr:last-child td {
+	border-bottom: none;
+}
+
+.wps-dashboard__table tr:hover td {
+	background: #f9f9f9;
+}
+
+/* === Badges === */
+.wps-dashboard__badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.wps-dashboard__badge--good {
+	background: #d1fae5;
+	color: #065f46;
+}
+
+.wps-dashboard__badge--warning {
+	background: #fef3c7;
+	color: #92400e;
+}
+
+.wps-dashboard__badge--critical {
+	background: #fee2e2;
+	color: #991b1b;
+}
+
+.wps-dashboard__badge--info {
+	background: #e0f2fe;
+	color: #075985;
+}
+
+/* === PHP extension grid === */
+.wps-dashboard__extension-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 16px;
+}
+
+/* === Share panel === */
+.wps-dashboard__share-panel {
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 16px;
+	margin-bottom: 20px;
+}
+
+.wps-dashboard__share-panel h3 {
+	margin: 0 0 12px;
+	font-size: 14px;
+}
+
+#wps-new-link-area {
+	margin-bottom: 10px;
+}
+
+#wps-new-link-area .wps-share-url-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: #fff;
+	border: 1px solid #2271b1;
+	border-radius: 3px;
+	padding: 8px 12px;
+	margin-bottom: 6px;
+}
+
+#wps-new-link-area code {
+	flex: 1;
+	font-size: 12px;
+	word-break: break-all;
+}
+
+/* === Error notice === */
+#wps-error {
+	margin: 12px 0;
+}
+
+/* === Responsive === */
+@media (max-width: 782px) {
+	.wps-dashboard__cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.wps-dashboard__tabs {
+		overflow-x: auto;
+		flex-wrap: nowrap;
+	}
+
+	.wps-dashboard__tab {
+		white-space: nowrap;
+	}
+}

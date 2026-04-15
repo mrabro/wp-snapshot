@@ -1,0 +1,166 @@
+# Copyright (C) 2026 WP Snapshot
+# This file is distributed under the same license as the WP Snapshot plugin.
+# M Rafi Abro <mrafiabro@hotmail.com>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Snapshot 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mrabro/wp-snapshot/issues\n"
+"POT-Creation-Date: 2026-04-15 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: M Rafi Abro <mrafiabro@hotmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: WP-CLI 2.x\n"
+"X-Domain: wp-snapshot\n"
+
+#. Plugin Name of the plugin
+msgid "WP Snapshot"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/mrabro/wp-snapshot"
+msgstr ""
+
+#. Description of the plugin
+msgid "Generate a complete site audit report — plugins, themes, server info, database, cron, security, and more. Export as PDF or share via temporary link."
+msgstr ""
+
+#. Author of the plugin
+msgid "M Rafi Abro"
+msgstr ""
+
+#: includes/class-wps-activator.php
+msgid "WP Snapshot requires PHP 8.1 or higher."
+msgstr ""
+
+#: includes/class-wps-activator.php
+msgid "WP Snapshot requires WordPress 6.5 or higher."
+msgstr ""
+
+#: includes/class-wps-bootstrap.php
+msgid "Generate Snapshot"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "WP Snapshot"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: includes/class-wps-rest-api.php
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: includes/class-wps-rest-api.php
+msgid "Snapshot was generated but could not be saved to disk."
+msgstr ""
+
+#: includes/class-wps-rest-api.php
+msgid "No snapshot has been generated yet. Click \"Generate Snapshot\" to create one."
+msgstr ""
+
+#: includes/class-wps-rest-api.php
+msgid "Generate a snapshot first before creating a share link."
+msgstr ""
+
+#: includes/class-wps-rest-api.php
+msgid "No snapshot found. Generate one first."
+msgstr ""
+
+#: includes/class-wps-rest-api.php
+msgid "Token not found or already revoked."
+msgstr ""
+
+#: includes/class-wps-rest-api.php
+msgid "Share link has been revoked."
+msgstr ""
+
+#: includes/class-wps-share-manager.php
+msgid "This snapshot link is invalid or has expired."
+msgstr ""
+
+#: includes/class-wps-share-manager.php
+msgid "WP Snapshot — Not Found"
+msgstr ""
+
+#: includes/class-wps-share-manager.php
+msgid "This snapshot link has expired."
+msgstr ""
+
+#: includes/class-wps-share-manager.php
+msgid "WP Snapshot — Expired"
+msgstr ""
+
+#: includes/class-wps-share-manager.php
+msgid "Failed to generate a secure token."
+msgstr ""
+
+#: includes/collectors/class-wps-collector-environment.php
+msgid "Environment"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-plugins.php
+msgid "Plugins"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-themes.php
+msgid "Themes"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-database.php
+msgid "Database"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-cron.php
+msgid "Cron Jobs"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-cron.php
+msgid "One-time"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-cron.php
+msgid "from now"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-cron.php
+msgid "ago"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-post-types.php
+msgid "Post Types"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-taxonomies.php
+msgid "Taxonomies"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-users.php
+msgid "Users & Roles"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-rest-api.php
+msgid "REST API"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-security.php
+msgid "Security"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-media.php
+msgid "Media Library"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-media.php
+msgid "Unable to calculate"
+msgstr ""
+
+#: includes/collectors/class-wps-collector-performance.php
+msgid "Performance"
+msgstr ""
