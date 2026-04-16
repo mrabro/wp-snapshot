@@ -12,7 +12,7 @@ Generate a complete site audit report — plugins, themes, server info, database
 
 == Description ==
 
-WP Snapshot generates a comprehensive "snapshot" of your WordPress site's current state. Perfect for:
+Site Audit Snapshot generates a comprehensive "snapshot" of your WordPress site's current state. Perfect for:
 
 * **Agency handoffs** — Give clients a professional summary of what's installed and configured
 * **Site audits** — Quickly assess any WordPress site's health, security, and performance
@@ -40,20 +40,20 @@ WP Snapshot generates a comprehensive "snapshot" of your WordPress site's curren
 * Export raw JSON data for programmatic use
 * Sensitive data (database credentials, filesystem paths) is automatically redacted from share links
 
-**Snapshot data is stored as a JSON file** in `wp-content/uploads/wp-snapshot/` — not in the database — avoiding `wp_options` overflow on large sites.
+**Snapshot data is stored as a JSON file** in `wp-content/uploads/site-audit-snapshot/` — not in the database — avoiding `wp_options` overflow on large sites.
 
 == Installation ==
 
-1. Upload the `wp-snapshot` folder to `/wp-content/plugins/`
+1. Upload the `site-audit-snapshot` folder to `/wp-content/plugins/`
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Navigate to **Tools → WP Snapshot**
+3. Navigate to **Tools → Site Audit Snapshot**
 4. Click **Generate Snapshot**
 
 == Frequently Asked Questions ==
 
 = Does this plugin slow down my site? =
 
-No. WP Snapshot only collects data when you explicitly click "Generate Snapshot". It adds zero frontend overhead.
+No. Site Audit Snapshot only collects data when you explicitly click "Generate Snapshot". It adds zero frontend overhead.
 
 = Is the shared link secure? =
 
@@ -61,7 +61,7 @@ Share links use 256-bit cryptographically random tokens (via `random_bytes(32)`)
 
 = Where is snapshot data stored? =
 
-Snapshots are stored as JSON files in `wp-content/uploads/wp-snapshot/`. The directory is protected by an `index.php` drop-in. On uninstall, all files are removed.
+Snapshots are stored as JSON files in `wp-content/uploads/site-audit-snapshot/`. The directory is protected by an `index.php` drop-in. On uninstall, all files are removed.
 
 = Can I extend it with custom data collectors? =
 
@@ -88,6 +88,7 @@ See the **Hooks Reference** section in the plugin's source code. Key hooks:
 2. Security tab with traffic-light indicators
 3. Plugins tab with sortable table
 4. Public share page
+5. REST API endpoints registered by namespace
 
 == Changelog ==
 
