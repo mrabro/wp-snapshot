@@ -3,7 +3,7 @@
  * Plugin Name:       Site Audit Snapshot
  * Plugin URI:        https://github.com/mrabro/site-audit-snapshot
  * Description:       Generate a complete site audit report — plugins, themes, server info, database, cron, security, and more. Export as PDF or share via temporary link.
- * Version:           1.0.0
+ * Version:           1.0.5
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Author:            M Rafi Abro
@@ -26,7 +26,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Plugin constants.
-define( 'WPS_VERSION', '1.0.0' );
+define( 'WPS_VERSION', '1.0.5' );
 define( 'WPS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WPS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPS_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
