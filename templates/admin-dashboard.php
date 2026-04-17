@@ -45,7 +45,7 @@ $sec = fn( string $key ): array => $sections[ $key ]['data'] ?? [];
 		</button>
 
 		<?php if ( $has_snapshot ) : ?>
-			<a id="wps-pdf-btn" href="<?php echo esc_url( rest_url( 'wp-snapshot/v1/pdf' ) . '?_wpnonce=' . wp_create_nonce( 'wp_rest' ) ); ?>" target="_blank" class="wps-dashboard__btn wps-dashboard__btn--secondary">
+			<a id="wps-pdf-btn" href="<?php echo esc_url( rest_url( 'site-audit-snapshot/v1/pdf' ) . '?_wpnonce=' . wp_create_nonce( 'wp_rest' ) ); ?>" target="_blank" class="wps-dashboard__btn wps-dashboard__btn--secondary">
 				<?php esc_html_e( 'Print / Export PDF', 'site-audit-snapshot' ); ?>
 			</a>
 			<button id="wps-json-btn" class="wps-dashboard__btn wps-dashboard__btn--secondary">

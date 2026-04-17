@@ -3,7 +3,7 @@
  * PDF / Print Template
  *
  * Rendered by Pdf_Generator::generate_html().
- * Accessed via GET /wp-json/wp-snapshot/v1/pdf.
+ * Accessed via GET /wp-json/site-audit-snapshot/v1/pdf.
  * Designed for browser print-to-PDF (Ctrl+P).
  *
  * Variables available:

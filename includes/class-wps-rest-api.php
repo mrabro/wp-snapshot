@@ -232,7 +232,7 @@ class Rest_Api {
 
 		// Send as a standalone HTML page. Browser handles print-to-PDF.
 		header( 'Content-Type: text/html; charset=utf-8' );
-		header( 'Content-Disposition: inline; filename="wp-snapshot-' . sanitize_file_name( $snapshot['site_name'] ) . '.html"' );
+		header( 'Content-Disposition: inline; filename="site-audit-snapshot-' . sanitize_file_name( $snapshot['site_name'] ) . '.html"' );
 		header( 'X-Robots-Tag: noindex, nofollow' );
 		// Disable caching.
 		header( 'Cache-Control: no-store, no-cache, must-revalidate' );
