@@ -59,19 +59,20 @@ class Admin_Page {
 			'wps-admin',
 			'wpsData',
 			[
-				'restUrl'         => rest_url( 'site-audit-snapshot/v1/' ),
-				'nonce'           => wp_create_nonce( 'wp_rest' ),
-				'pdfUrl'          => rest_url( 'site-audit-snapshot/v1/pdf' ),
-				'shareUrl'        => rest_url( 'site-audit-snapshot/v1/share' ),
-				'i18n'            => [
-					'generating'  => __( 'Generating…', 'site-audit-snapshot' ),
-					'generate'    => __( 'Generate Snapshot', 'site-audit-snapshot' ),
-					'copying'     => __( 'Copied!', 'site-audit-snapshot' ),
-					'copy'        => __( 'Copy Link', 'site-audit-snapshot' ),
-					'creatingLink' => __( 'Creating link…', 'site-audit-snapshot' ),
-					'shareExpiry' => __( 'Share link expires in', 'site-audit-snapshot' ),
+				'restUrl'  => rest_url( 'site-audit-snapshot/v1/' ),
+				'nonce'    => wp_create_nonce( 'wp_rest' ),
+				'pdfUrl'   => rest_url( 'site-audit-snapshot/v1/pdf' ),
+				'shareUrl' => rest_url( 'site-audit-snapshot/v1/share' ),
+				'i18n'     => [
+					'generating'    => __( 'Generating…', 'site-audit-snapshot' ),
+					'generate'      => __( 'Generate Snapshot', 'site-audit-snapshot' ),
+					'copying'       => __( 'Copied!', 'site-audit-snapshot' ),
+					'copy'          => __( 'Copy Link', 'site-audit-snapshot' ),
+					'creatingLink'  => __( 'Creating link…', 'site-audit-snapshot' ),
+					'shareExpiry'   => __( 'Share link expires in', 'site-audit-snapshot' ),
 					'revokeConfirm' => __( 'Revoke this share link?', 'site-audit-snapshot' ),
-					'error'       => __( 'An error occurred. Please try again.', 'site-audit-snapshot' ),
+					'error'         => __( 'An error occurred. Please try again.', 'site-audit-snapshot' ),
+					'exportMd'      => __( 'Export Markdown', 'site-audit-snapshot' ),
 				],
 			]
 		);

@@ -53,6 +53,38 @@ msgstr ""
 msgid "You do not have permission to access this page."
 msgstr ""
 
+#: includes/class-wps-admin-page.php
+msgid "Generating…"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "Copied!"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "Copy Link"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "Creating link…"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "Share link expires in"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "Revoke this share link?"
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "An error occurred. Please try again."
+msgstr ""
+
+#: includes/class-wps-admin-page.php
+msgid "Export Markdown"
+msgstr ""
+
 #: includes/class-wps-rest-api.php
 msgid "You do not have permission to perform this action."
 msgstr ""

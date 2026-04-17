@@ -51,6 +51,9 @@ $sec = fn( string $key ): array => $sections[ $key ]['data'] ?? [];
 			<button id="wps-json-btn" class="wps-dashboard__btn wps-dashboard__btn--secondary">
 				<?php esc_html_e( 'Export JSON', 'site-audit-snapshot' ); ?>
 			</button>
+			<button id="wps-md-btn" class="wps-dashboard__btn wps-dashboard__btn--secondary">
+				<?php esc_html_e( 'Export Markdown', 'site-audit-snapshot' ); ?>
+			</button>
 			<button id="wps-share-btn" class="wps-dashboard__btn wps-dashboard__btn--secondary">
 				<?php esc_html_e( 'Create Share Link', 'site-audit-snapshot' ); ?>
 			</button>

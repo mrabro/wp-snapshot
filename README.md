@@ -51,6 +51,7 @@ A single click captures a full picture of your WordPress site:
 - **Print / Save as PDF** — browser print dialog, no server-side library required
 - **Temporary share link** — 256-bit cryptographically random token, expires in 72 hours by default (configurable up to 30 days). Sensitive data is automatically redacted.
 - **Export JSON** — download raw snapshot data for programmatic use
+- **Export MD** — download as MD (MarkDown) snapshot data for AI use
 
 Snapshot data is stored as a JSON file in `wp-content/uploads/site-audit-snapshot/` — not in the database — avoiding `wp_options` bloat on large sites.
 
